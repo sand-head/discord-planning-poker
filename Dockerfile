@@ -9,7 +9,7 @@ RUN apt-get -qq update && apt-get upgrade -y --no-install-recommends && \
     curl -fsSL https://github.com/denoland/deno/releases/download/v${DENO_VERISON}/deno_src.tar.gz --output deno_src.tar.gz && \
     tar -xvf deno_src.tar.gz && \
     rm deno_src.tar.gz && \
-    chmod 755 deno \
+    chmod 755 deno && \
     apt-get -qq clean && rm -rf /var/lib/apt/lists/*
 
 # add third_party prebuilts missing in release tar, as well as rust
